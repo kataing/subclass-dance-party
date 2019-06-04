@@ -29,3 +29,14 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function() {
+  var newStyleSettings = {
+    left: '3%', 
+  }
+  this.$node.css(newStyleSettings);
+};
+
+// makeDancer.prototype.swapDancers = function() {
+  
+// };

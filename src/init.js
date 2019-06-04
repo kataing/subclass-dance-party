@@ -28,6 +28,47 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+  
+  
+  $('.lineUpButton').on('click', function(event) {
+    for(var i = 0; i<window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+  });
+  
+  $('.swapDancersButton').on('click', function(event) {
+    
+    
+    console.log(window.dancers[0].top);
+    if(window.dancers.length % 2 === 0) {
+      for(var i = 0; i<window.dancers.length; i+=2) {
+        var top1 = window.dancers[i].top;
+        var left1 = window.dancers[i].left;
+        var top2 = window.dancers[i+1].top;
+        var left2 = window.dancers[i+1].left;
+        window.dancers[i+1].top = top1;
+        window.dancers[i+1].left = left1;
+        window.dancers[i].top = top2;
+        window.dancers[i].left = left2;
+      
+        var styleSettings1 = {
+          top: window.dancers[i].top,
+          left: window.dancers[i].left
+        };
+        var styleSettings2 = {
+          top: window.dancers[i+1].top,
+          left: window.dancers[i+1].left
+        };
+        window.dancers[i].$node.css(styleSettings2);
+        window.dancers[i+1].$node.css(styleSettings1);
+      }
+    } else {
+      alert('Sorry, every dancer needs a partner. Make another dancer.')
+    }
+    
+  })
+  
 });
 

@@ -9,36 +9,20 @@ makeSlidyDancer.prototype.constructor = makeSlidyDancer;
 
 makeSlidyDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
-  // console.log(this.step);
-  // console.log(oldStep);
   makeDancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  // this.$node.slideUp();
-  // this.$node.slideDown(); //change this for different functionality
-  // this.$node.toggle();
-  // var styleSettings = {
-  //   background: solid red
-  // };
-  // this.$node.css(styleSettings);
   var randPosition1 = 90*Math.random();
   var randPosition2 = 90*Math.random();
   var randPosition3 = 90*Math.random();
   var randPosition4 = 75*Math.random();
-  // var randDirection = directions[Math.floor(Math.random()*2)]
+
   this.$node.animate({
     left: `${randPosition1}%`,
     right: `${randPosition2}%`,
     top: `${randPosition3}%`,
     bottom: `${randPosition4}%`,
-    // height: '10px',
-    // width: '10px',
-    opacity: '.88' //
+    opacity: '.88' 
   });
 };
-
-//instead of px , use %
-// makeSlidyDancer.prototype.colorizer = function() {
-
-// };
