@@ -22,19 +22,19 @@ makeSlidyDancer.prototype.step = function() {
   //   background: solid red
   // };
   // this.$node.css(styleSettings);
-  var randPosition1 = 1450*Math.random();
-  var randPosition2 = 1450*Math.random();
-  var randPosition3 = 1050*Math.random();
-  var randPosition4 = 1050*Math.random();
+  var randPosition1 = 90*Math.random();
+  var randPosition2 = 90*Math.random();
+  var randPosition3 = 90*Math.random();
+  var randPosition4 = 75*Math.random();
   // var randDirection = directions[Math.floor(Math.random()*2)]
   this.$node.animate({
-    left: `${randPosition1}px`,
-    right: `${randPosition2}px`,
-    top: `${randPosition3}px`,
-    bottom: `${randPosition4}px`,
-    height: '10px',
-    width: '10px',
-    opacity: '.66' //
+    left: `${randPosition1}%`,
+    right: `${randPosition2}%`,
+    top: `${randPosition3}%`,
+    bottom: `${randPosition4}%`,
+    // height: '10px',
+    // width: '10px',
+    opacity: '.88' //
   });
 };
 

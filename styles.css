@@ -28,11 +28,36 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid black;
-  background-color: solid red;
+  /*border:10px solid black;*/
+/*  background-color: solid red;
   border-color: CornflowerBlue;
-  border-radius:50px;
+  border-radius:50px;*/
   position:absolute;
+}
+
+.blink{
+  height: 25px;
+  width: 25px;
+  background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  border-radius:500px;
+}
+
+.slide{
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background-color: purple;
+  
+}
+
+.twinkle{
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background-color: green;
 }
 
 /*
