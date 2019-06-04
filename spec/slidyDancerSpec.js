@@ -4,17 +4,17 @@ describe('slidyDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    slidyDancer = new makeslidyDancer(10, 20, timeBetweenSteps);
+    slidyDancer = new makeSlidyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
     expect(slidyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a slideDown function that makes its node slide down', function() {
-    sinon.spy(slidyDancer.$node, 'slideDown');
+  it('should have a animate function that makes its node slide', function() {
+    sinon.spy(slidyDancer.$node, 'animate');
     slidyDancer.step();
-    expect(slidyDancer.$node.slideDown.called).to.be.true;
+    expect(slidyDancer.$node.animate.called).to.be.true;
   });
 
   describe('dance', function() {
